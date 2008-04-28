@@ -1,0 +1,10 @@
+2004-07-07  Daisuke Murase <typester@cpan.org>
+
+	* title: this line is item heading.
+	item item item
+	item item item
+
+	* title [tag]: The second item.
+	item must be indented by one TAB.
+
+	Blank line is not considered as item separator.
