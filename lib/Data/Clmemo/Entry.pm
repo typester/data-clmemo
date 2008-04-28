@@ -18,7 +18,7 @@ sub parse {
     my $add_item = sub {
         my @lines = @_ or return;
         my $item = Data::Clmemo::Item->parse(@lines) or return;
-        $self->items->add($item);
+        $self->items->unshift($item);
     };
 
     my @buf;

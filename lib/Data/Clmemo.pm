@@ -23,7 +23,7 @@ sub parse {
     my $add_entry = sub {
         my @lines = @_ or return;
         my $entry = Data::Clmemo::Entry->parse(@_) or return;
-        $self->entries->add($entry);
+        $self->entries->unshift($entry);
     };
 
     my @lines;

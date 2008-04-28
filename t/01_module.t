@@ -1,7 +1,7 @@
 use Test::Base;
 use Test::Exception;
 
-plan 'no_plan';
+plan tests => 15;
 
 use FindBin;
 use File::Spec;
@@ -24,11 +24,11 @@ is( $entry->header->author_address, 'typester@cpan.org' );
 
 is( $entry->items->count, 2, 'first entry has 2 items');
 
-my $item1 = $entry->items->[0];
+my $item1 = $entry->items->[1];
 is( $item1->title, 'title' );
 like( $item1->content, qr/^this line is/ );
 
-my $item2 = $entry->items->[1];
+my $item2 = $entry->items->[0];
 is( $item2->title, 'title' );
 like( $item2->content, qr/Blank line is not considered as item separator./);
 is_deeply( $item2->tags, ['tag'] );

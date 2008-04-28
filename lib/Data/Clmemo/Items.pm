@@ -1,7 +1,7 @@
 package Data::Clmemo::Items;
 use Moose;
 
-extends 'Data::Clmemo::Entries';
+extends 'Data::Clmemo::Iter';
 
 1;
 
