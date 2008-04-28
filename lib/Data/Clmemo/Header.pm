@@ -3,9 +3,9 @@ use Moose;
 
 use Mail::Address;
 
-has 'date'   => ( is => 'ro' );
-has 'author' => ( is => 'ro' );
-has 'author_name' => ( is => 'ro' );
+has 'date'           => ( is => 'ro' );
+has 'author'         => ( is => 'ro' );
+has 'author_name'    => ( is => 'ro' );
 has 'author_address' => ( is => 'ro' );
 
 sub parse {
