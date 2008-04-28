@@ -19,6 +19,8 @@ isa_ok( $entry, 'Data::Clmemo::Entry' );
 isa_ok( $entry->header, 'Data::Clmemo::Header' );
 is( $entry->header->date, '2004-07-07');
 is( $entry->header->author, 'Daisuke Murase <typester@cpan.org>' );
+is( $entry->header->author_name, 'Daisuke Murase' );
+is( $entry->header->author_address, 'typester@cpan.org' );
 
 is( $entry->items->count, 2, 'first entry has 2 items');
 
@@ -30,10 +32,3 @@ my $item2 = $entry->items->[1];
 is( $item2->title, 'title' );
 like( $item2->content, qr/Blank line is not considered as item separator./);
 is_deeply( $item2->tags, ['tag'] );
-
-
-
-
-
-
-
